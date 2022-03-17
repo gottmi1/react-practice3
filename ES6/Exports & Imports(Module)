@@ -1,0 +1,16 @@
+person.js에
+
+const person = {
+  name: "Jinwon"
+}
+이 있다고 치자
+export default person으로 익스포트시키고 다른 js에서 import했을 때 이 안에 변수나 상수 함수 몇개가 있던 다 가져옴.
+
+utility.js에는 변수가 2개 이있는데
+
+export const clean = () => {...}
+export const baseData = 10
+이렇게 각자 가지고 가고 싶을 수 있음.
+
+그럴 떈 import { baseData } from ... 으로 중괄호로 가둬서 가져온다
+defalut를 설정하지 않았기 때문에 변수명으로 따로 가져오는 것

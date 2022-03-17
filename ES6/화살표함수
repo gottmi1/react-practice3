@@ -1,0 +1,11 @@
+const myFunc = (a) => {return console.log(a);
+
+줄이기
+
+const myFunc = (a) => console.log(a);
+
+const myFunc = a => console.log(a);
+매개변수가 하나일 땐 괄호 생략
+const myFunc = num => num / * 2;
+
+등 매우 짧게 줄일 수가 있다

@@ -1,0 +1,31 @@
+const number = [1,2,3]
+const newNumbers = [...number,4]
+
+console.log(newNumbers);
+결과 : 1234
+만약 ... 3개를 지우고 [number,4]이렇게하면
+[Array[3] , 4] 이렇게 나옴
+
+
+const person = {
+  name : 'jiwnon'
+}
+
+const newPerson = {
+  ...person,
+  age : 25
+}
+
+console.log(newPerson);
+결과 : name과 age가 둘 다 나옴
+
+위가 스프레드 연산자다
+
+
+const filter (...args) => {
+  return args.filter(el => el === 1)
+}
+
+console.log(filter(1,2,3))
+결과 : [1]
+레스트 연산자로 filter의 매개변수 (1,2,3)을 모두 가져와서 필터한것

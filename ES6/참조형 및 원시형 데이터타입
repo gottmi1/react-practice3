@@ -1,0 +1,19 @@
+const person = {
+  name : "a"
+} 
+위에 건 메모리에 저장
+
+const secondPerson = person <-- 이 때 포인터가 복사되는 것
+얘는 메모리에 포인터를 저장
+
+이 아래에서 person.name = "b"로 바꾸면 person,secondPerson 모두 "b"가 되는데
+이런 일이 발생한 이유는 포인터를 복사해서 메모리에 잇는 같은 객체를 지정했기 때문 <---- 중요하다고 함
+
+연동 안되는 복사를 하는법
+
+const secondPerson = {
+  ...person
+}
+이렇게 하면 새로운 놈으로 취급된다
+
+객체,배열은 참조타입이고, const secondPerson = person 이런식으로 재할당하면 값이 아니라 포인터를 복사하는 것.

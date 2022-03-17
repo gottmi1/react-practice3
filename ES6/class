@@ -1,0 +1,68 @@
+class Person {
+  name = "jinwon" <--- 프로퍼티
+  call = () => {...}  <--- 메서드
+}
+
+속성이나 메서드를 추가할 떄 클래스는 인스턴스화 됨
+
+const myPerson = new Person()
+  myPerson.call()
+
+클래스는 생성자 함수를 만드는 간단한 방법이다.
+
+class Person extends Master <---- 상속, 모든 프로퍼티와 클래스를 사져올수 있고 새로운 것도 추가 가능
+
+
+class Human {
+  constructor() {
+    this.gender = "male"
+  }
+
+  printGneder() {
+    console.log(this.gender)
+  }
+}
+
+class Person extends Human {
+  constructor() < --------생성자 추가 {
+    super()
+    this.name = "jinwon";
+  }
+
+  printMyName() {
+    console.log(this.name)
+  }
+}
+
+const person = new Person() <------ 인스턴스로 저장
+person.printMyName();
+
+결과 : "jinwon"
+
+Human에 상속시켜줘서 printGneder도 사용할 수 있어짐
+person.printGneder()
+
+결과 : 오류 발생. super가 없기 때문
+super()를 추가해주면 잘 나옴
+
+class는 리액트 구성요소를 만들 때 사용.
+
+
+-- 프로퍼티와 메서드
+
+class Human {
+  gender = "male"
+
+  printGneder = () => {
+    console.log(this.gender)
+  }
+}
+
+class Person extends Human {
+  name = "jinwon";
+  gender = "femail"
+
+  printMyName = () => {
+    console.log(this.name)
+  }
+}
