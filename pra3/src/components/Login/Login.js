@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect, useReducer, useContext } from "react";
 
 import Card from "../UI/Card/Card";
 import classes from "./Login.module.css";
 import Button from "../UI/Button/Button";
+import AuthContext from "../../store/auth-context";
 
 const emailReduer = (state, action) => {
   if (action.type === "user_input") {
@@ -44,6 +45,8 @@ const Login = (props) => {
     isValid: null,
   });
   const [formIsValid, setFormIsValid] = useState(false);
+
+  const AuthCtx = useContext(AuthContext);
 
   // useEffect(() => {
   //   console.log("이펙트 러닝");
@@ -103,7 +106,7 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onLogin(emailState.value, passwordState.value);
+    AuthCtx.onLogin(emailState.value, passwordState.value);
   };
 
   return (
