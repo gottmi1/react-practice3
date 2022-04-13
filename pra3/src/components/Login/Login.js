@@ -22,7 +22,7 @@ const Login = (props) => {
   // 두번째 인자가 없으면 모든 사이드이펙트에 실행되고 빈 배열이면 렌더될 때 딱 한번 실행, 두번째 인자에 무언가 있다면 그것의 상태가 변할 때 마다 실행됨
 
   useEffect(() => {
-    // 그리고 useEffect는 함수도 리턴할 수 있따
+    // 그리고 useEffect는 함수도 리턴할 수 있다
     const identifier = setTimeout(() => {
       // 여기서 하고싶은 건 setFormIsValid의 조건을 만족하면 500ms 이후에 console.log()를 띄우는 것
       console.log("상태감지중");
